@@ -26,22 +26,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#"><b>Home</b></a>
+              <asp:LinkButton ID="Home" runat="server" class="nav-link " OnClick="Home_Click"><b>Home</b></asp:LinkButton>
             </li>     
               <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#"><b>AboutUs</b></a>
+              <asp:LinkButton ID="Aboutus" runat="server" class="nav-link " OnClick="Aboutus_Click" ><b>AboutUs</b></asp:LinkButton>
             </li>
               <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#"><b>ContactUs</b></a>
+              <asp:LinkButton ID="ContactUs" runat="server" class="nav-link " OnClick="ContactUs_Click" ><b>ContactUs</b></asp:LinkButton>
             </li>
+             </ul>
         </div>
 
-          
-            <input class="form-control  mr-sm-2 col-sm-3" type="search" placeholder="Search" aria-label="Search" S/>
-            <button class="btn btn-success  my-2 my-sm-0 mx-2" type="submit" >Search</button>
-                    <button class="btn btn-primary my-2 my-sm-0 mx-2" type="submit" >Log In</button>
-                      <button class="btn btn-danger my-2 my-sm-0 mx-2" type="submit" >Register</button>
-         
+            <asp:TextBox ID="searchbox" runat="server" class="form-control  mr-sm-2 col-sm-3" type="search" placeholder="Search" aria-label="Search" />
+            <asp:Button ID="btnsearch" runat="server" Text="Search" class="btn btn-success  my-2 my-sm-0 mx-2" type="submit" />
+                    <asp:Button ID="btnlogin" runat="server" Text="Login" class="btn btn-primary my-2 my-sm-0 mx-2" type="submit" OnClick="btnlogin_Click" />
+                      <asp:Button ID="btnregister" runat="server" Text="Register" class="btn btn-danger my-2 my-sm-0 mx-2" type="submit" OnClick="btnregister_Click" />
+    
 
   </div>
 </nav> 

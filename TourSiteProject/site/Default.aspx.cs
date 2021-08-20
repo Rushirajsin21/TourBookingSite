@@ -13,5 +13,31 @@ namespace Site
         {
 
         }
+
+        protected void Home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+
+        }
+
+        protected void Aboutus_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AboutUs.aspx");
+        }
+
+        protected void ContactUs_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ContactUs.aspx");
+        }
+
+        protected void btnlogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void btnregister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
     }
 }
