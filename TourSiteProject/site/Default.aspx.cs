@@ -16,7 +16,7 @@ namespace Site
 
         protected void Home_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Home.aspx");
+            Response.Redirect("Default.aspx");
 
         }
 

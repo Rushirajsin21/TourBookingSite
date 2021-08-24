@@ -11,6 +11,37 @@ namespace Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+       
+            
+        }
+
+        protected void username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+        }
+
+        protected void Aboutus_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AboutUs.aspx");
+        }
+
+        protected void ContactUs_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ContactUs.aspx");
+        }
+
+        protected void btnregister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
+
+        protected void searchbox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

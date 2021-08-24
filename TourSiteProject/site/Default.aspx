@@ -5,11 +5,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-   <link rel="stylesheet" href="StyleSheet2.css" />
+   <link rel="stylesheet" href="style1.css" />
     
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+g
 	
 </head>
 <body>
@@ -48,10 +49,15 @@
 
     </form>
     <section class="header">
-    <h1 id="pose font-weight-bold"> Welcome To Our Site tour trip</h1>
+    <h1 id="pose"> Welcome To Our Site <i>Tour Trip &#9992;</i></h1>
             </section>
-        
-        <div>
-        </div>
+    <div id="cols">
+       hello world
+    </div>
+         <footer id="footer"  align="center">
+             <br /><br /><br /><br /><br /><br /><br /> &copy; All Right Reserved @ <i>Tour Trip</i> </footer>
+       
+       
+
 </body>
 </html>
