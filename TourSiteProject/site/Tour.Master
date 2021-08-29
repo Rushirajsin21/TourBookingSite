@@ -1,18 +1,23 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Tour.Master" CodeBehind="Default.aspx.cs" Inherits="Site.WebForm1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Tour.master.cs" Inherits="Site.Tour" %>
 
-<%--<!DOCTYPE html>
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
     <title></title>
-   <link rel="stylesheet" href="style1.css" />
-  
-	
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="project.css" />
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
-        
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div>
+            
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
   <div class="container-fluid">
 
     <a class="navbar-brand  " href="#"><i>Tour Trip&#9992;</i></a>
@@ -36,22 +41,22 @@
 
             <asp:TextBox ID="searchbox" runat="server" class="form-control  mr-sm-2 col-3" type="search" placeholder="Search" aria-label="Search" />
             <asp:Button ID="btnsearch" runat="server" Text="Search" class="btn btn-success  my-2 my-sm-0 mx-2" type="submit" />
-                    <asp:Button ID="btnlogin" runat="server" Text="Login" class="btn btn-primary my-2 my-sm-0 mx-2" type="submit" OnClick="btnlogin_Click" />
-                      <asp:Button ID="btnregister" runat="server" Text="Register" class="btn btn-danger my-2 my-sm-0 mx-2" type="submit" OnClick="btnregister_Click" />
+                    <asp:Button ID="btnlogin" runat="server" Text="Login" class="btn btn-primary my-2 my-sm-0 mx-2" type="submit" OnClick="btnlogin_Click" CausesValidation="False" UseSubmitBehavior="False" />
+                      <asp:Button ID="btnregister" runat="server" Text="Register" class="btn btn-danger my-2 my-sm-0 mx-2" type="submit" OnClick="btnregister_Click" CausesValidation="False" UseSubmitBehavior="False" ValidateRequestMode="Disabled" />
     
 
   </div>
 </nav> 
-
-    </form>--%>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section class="header">
-    <h1 id="pose"> Welcome To Our Site <i>Tour Trip &#9992;</i></h1>
-            </section>
-   
-         <div id="homes"></div>
-       </asp:Content>
-<%--       
-
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder>
+          
+         
+        
+            <footer id="footer"  align="center">
+           
+            &copy; All Right Reserved By <i><b>Tour Trip</b></i> </footer>
+                 
+        </div>
+    </form>
 </body>
-</html>--%>
+</html>

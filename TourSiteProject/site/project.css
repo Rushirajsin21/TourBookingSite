@@ -12,14 +12,21 @@
 #pose {
     color: red;
 }
+
 #footer {
     background-color: black;
     color: white;
-    height: 200px;
-}
-
-#cols {
     height: 100px;
+   
 }
 body {
+}
+#logs{
+    height:197px;
+}
+#regs{
+    height:179px;
+}
+#homes{
+    height:500px;
 }

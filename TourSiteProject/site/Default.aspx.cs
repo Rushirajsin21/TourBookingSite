@@ -11,33 +11,13 @@ namespace Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["home_start"] = "home";
+            if (Session["home_start"].ToString() == "home")
+            {
+                LinkButton linkButton = (LinkButton)Master.FindControl("Home");
+                linkButton.Visible = false;
+            }
         }
 
-        protected void Home_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Default.aspx");
-
-        }
-
-        protected void Aboutus_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AboutUs.aspx");
-        }
-
-        protected void ContactUs_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ContactUs.aspx");
-        }
-
-        protected void btnlogin_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Login.aspx");
-        }
-
-        protected void btnregister_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Register.aspx");
-        }
     }
 }

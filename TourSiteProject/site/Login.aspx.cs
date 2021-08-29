@@ -11,38 +11,30 @@ namespace Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-       
+            Session["login_start"] = "log_in";
+            if (Session["login_start"].ToString() =="log_in")
+            {
+                Button button = (Button)Master.FindControl("btnlogin");
+                button.Visible = false;
+                TextBox textBox = (TextBox)Master.FindControl("searchbox");
+                textBox.Visible = false;
+                Button button1 = (Button)Master.FindControl("btnsearch");
+                button1.Visible = false;
+            }
+          
+            
             
         }
 
-        protected void username_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Home_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Default.aspx");
-        }
-
-        protected void Aboutus_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AboutUs.aspx");
-        }
-
-        protected void ContactUs_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ContactUs.aspx");
-        }
-
-        protected void btnregister_Click(object sender, EventArgs e)
+        protected void reglink_Click(object sender, EventArgs e)
         {
             Response.Redirect("Register.aspx");
         }
 
-        protected void searchbox_TextChanged(object sender, EventArgs e)
+        protected void lgbtnClear_Click(object sender, EventArgs e)
         {
-
+            lgemail.Text = lgpassword.Text = lgusername.Text = "";
+            lgusername.Focus();
         }
     }
 }
