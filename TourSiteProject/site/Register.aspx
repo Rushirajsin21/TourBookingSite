@@ -75,11 +75,7 @@
                   </asp:LinkButton>
             </td>
         </tr>
-        <tr>
-            <td>
-                hello worl
-            </td>
-        </tr>
+       
        </table>
     <div id="regs"></div>
    </asp:Content>
