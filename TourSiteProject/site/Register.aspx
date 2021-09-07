@@ -1,27 +1,33 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Tour.Master"  CodeBehind="Register.aspx.cs" Inherits="Site.Register" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>      
+    <div >      
         <br /><br /><br />
     <h1 align="center" > <asp:Label ID="registerlbl" runat="server" Text="This is Register Page"></asp:Label></h1>
         </div>
+   
+   
     <table align="center">
            <tr>
                <td>
                    <asp:Label ID="rglbusername" runat="server" Text="Username: "></asp:Label>
-                  <b> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="rgusername" ForeColor="Red"></asp:RequiredFieldValidator></b>
+                  <b> <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="rgusername" ForeColor="Red"></asp:RequiredFieldValidator>
+                   <asp:Label ID="rgmessage3" runat="server" Text="Username Already Exist" ForeColor="Red" AssociatedControlID="rgusername"></asp:Label>
+                   </b>
                       </td>
            </tr>
             <tr>
                 <td>
-                    <asp:TextBox ID="rgusername" runat="server" Width="500px" required=""></asp:TextBox>
+                    <asp:TextBox ID="rgusername" runat="server" Width="500px" required="" OnTextChanged="rgusername_TextChanged"></asp:TextBox>
                 </td>
             </tr>
            <tr>
                <td>
                    <asp:Label ID="rglbemail" runat="server" Text="Email Address:"></asp:Label>
 
-                  <b> <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rgemail" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator></b>
+                  <b> <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="rgemail" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                   <asp:Label ID="rgmsgemail" runat="server" ForeColor="Red" Text="Email Already Registered"></asp:Label>
+                   </b>
 
                </td>
            </tr>
@@ -38,7 +44,7 @@
            </tr>
            <tr>
                <td>
-                   <asp:TextBox ID="rgpassword" runat="server" Width="500px" required=""></asp:TextBox>
+                   <asp:TextBox ID="rgpassword" runat="server" Width="500px" required="" TextMode="Password"></asp:TextBox>
                </td>
            </tr>
         <tr>
@@ -71,11 +77,14 @@
            </tr>
         <tr>
             <td colspan="2" align="center">
-               <asp:LinkButton ID="login" runat="server" OnClick="login_Click" CausesValidation="False"><h4>Login Here</h4>
+               <asp:LinkButton ID="login" runat="server" OnClick="login_Click" CausesValidation="False"><h4><u>Login Here</u></h4>
                   </asp:LinkButton>
             </td>
         </tr>
+         
        
        </table>
+     <h1 align="center"> <asp:Label ID="rgmessage" runat="server" Text="You are Registered" ForeColor="#33CC33"></asp:Label></h1>
+     <h1 align="center"> <asp:Label ID="rgmessage2" runat="server" Text="You are Not Registered Please Register Again" ForeColor="Red"></asp:Label></h1>
     <div id="regs"></div>
    </asp:Content>

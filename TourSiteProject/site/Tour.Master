@@ -15,10 +15,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div >
             
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-  <div class="container-fluid">
+  <div class="container-fluid col-lg-12">
 
     <a class="navbar-brand  " href="#"><i>Tour Trip&#9992;</i></a>
 
@@ -28,13 +28,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <asp:LinkButton ID="Home" runat="server" class="nav-link " OnClick="Home_Click"><b>Home</b></asp:LinkButton>
+              <asp:LinkButton ID="Home" runat="server" class="nav-link " OnClick="Home_Click" CausesValidation="False"><b>Home</b></asp:LinkButton>
             </li>     
               <li class="nav-item">
-              <asp:LinkButton ID="Aboutus" runat="server" class="nav-link " OnClick="Aboutus_Click" ><b>AboutUs</b></asp:LinkButton>
+              <asp:LinkButton ID="Aboutus" runat="server" class="nav-link " OnClick="Aboutus_Click" CausesValidation="False" ><b>AboutUs</b></asp:LinkButton>
             </li>
               <li class="nav-item">
-              <asp:LinkButton ID="Contactus" runat="server" class="nav-link " OnClick="ContactUs_Click" ><b>ContactUs</b></asp:LinkButton>
+              <asp:LinkButton ID="Contactus" runat="server" class="nav-link " OnClick="ContactUs_Click" CausesValidation="False" ><b>ContactUs</b></asp:LinkButton>
             </li>
              </ul>
         </div>
@@ -51,8 +51,7 @@
            </asp:ContentPlaceHolder>
           
          
-        
-            <footer id="footer"  align="center">
+                    <footer id="footer"  align="center">
            
             &copy; All Right Reserved By <i><b>Tour Trip</b></i> </footer>
                  

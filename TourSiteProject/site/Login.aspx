@@ -8,18 +8,7 @@
             <br /><br /><br />
             <h1 align="center"> <asp:Label ID="lgheadinglbl" runat="server" Text="Login Page"></asp:Label></h1>
        <table align="center">
-           <tr>
-               <td>
-                   <asp:Label ID="lglbusername" runat="server" Text="Username:"></asp:Label>
-                   <b><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ForeColor="Red" ControlToValidate="lgusername"></asp:RequiredFieldValidator></b>
-                   </td>
-           </tr>
-            <tr>
-                <td>
-                    <asp:TextBox ID="lgusername" runat="server" Width="500px" required=""></asp:TextBox>
-                </td>
-                   
-            </tr>
+         
            <tr>
                <td>
                    <asp:Label ID="lglbemail" runat="server" Text="Email Address:"></asp:Label>
@@ -60,7 +49,7 @@
            </tr>
            <tr>
                <td colspan="2" align="center">
-                   <asp:LinkButton ID="reglink" runat="server" OnClick="reglink_Click" CausesValidation="False"><h4>Register Here</h4></asp:LinkButton>
+                   <asp:LinkButton ID="reglink" runat="server" OnClick="reglink_Click" CausesValidation="False"><h4><u>Register Here</u></h4></asp:LinkButton>
                </td>
            </tr>
         

@@ -33,8 +33,8 @@ namespace Site
 
         protected void lgbtnClear_Click(object sender, EventArgs e)
         {
-            lgemail.Text = lgpassword.Text = lgusername.Text = "";
-            lgusername.Focus();
+            lgemail.Text = lgpassword.Text ="" ;
+            lgemail.Focus();
         }
     }
 }
