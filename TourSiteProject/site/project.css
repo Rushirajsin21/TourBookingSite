@@ -30,3 +30,12 @@ body {
 #homes{
     height:500px;
 }
+#contact {
+   border:1px solid;
+   border-radius:4px;
+   background-color:aqua;
+   color:red;
+   width:800px;
+   margin:0 auto;
+   height:1000px;
+}
