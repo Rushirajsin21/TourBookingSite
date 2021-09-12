@@ -9,6 +9,6 @@ namespace Site
 {
     public class DBclass 
     {
-       public static SqlConnection cn = new SqlConnection(@"Data Source=LAPTOP-J0FBUPVC\SQLEXPRESS;Initial Catalog=login;Integrated Security=True");
+       public static SqlConnection cn = new SqlConnection(@"Data Source=LAPTOP-J0FBUPVC\SQLEXPRESS;Initial Catalog=reg;Integrated Security=True");
     }
 }

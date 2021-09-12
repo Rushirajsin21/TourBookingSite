@@ -46,10 +46,14 @@
     </form>--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="header">
-    <h1 id="pose"> Welcome To Our Site <i>Tour Trip &#9992;</i></h1>
+    <h1 id="pose"> <asp:Label ID="heading" runat="server" Text="Welcome To Our Site"></asp:Label><asp:Label ID="sitename" runat="server" Text=" Tour Trip"></asp:Label> <asp:Label ID="user" runat="server" Text=" user"></asp:Label> &#9992;</h1>
             </section>
    
-         <div id="homes"></div>
+         <div id="homes">
+            
+             <asp:Label ID="lbuser" runat="server" Text="Welcome "></asp:Label>
+            
+    </div>
        </asp:Content>
 <%--       
 

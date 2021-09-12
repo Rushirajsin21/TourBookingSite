@@ -38,7 +38,7 @@
            <tr>
 
                <td align="center">
-                  <asp:Button ID="lgbtnlogin" runat="server" Text="Login" CssClass="btn btn-primary btn-block" Width="500px" />
+                  <asp:Button ID="lgbtnlogin" runat="server" Text="Login" CssClass="btn btn-primary btn-block" Width="500px" OnClick="lgbtnlogin_Click" />
                </td>
            </tr>
            <tr>
@@ -54,6 +54,12 @@
            </tr>
         
        </table>
+               <h1 align="center">
+                   <asp:Label ID="lgmsg" runat="server" Text="
+                       Your are Loged in" ForeColor="#33CC33"></asp:Label></h1>
+               <h1 align="center">
+                   <asp:Label ID="lgmsg2" runat="server" Text="
+                       Your are not registered " ForeColor="Red"></asp:Label></h1>
 </div>
             <div id="logs"></div>
             </asp:Content>

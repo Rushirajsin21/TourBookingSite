@@ -16,7 +16,7 @@ namespace Site
         protected void Page_Load(object sender, EventArgs e)
         {
             Session["register_start"] = "register";
-            if(Session["register_start"].ToString()=="register")
+            if (Session["register_start"].ToString() == "register")
             {
                 Button button = (Button)Master.FindControl("btnregister");
                 button.Visible = false;

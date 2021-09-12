@@ -11,6 +11,22 @@ namespace Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            btnlogout.Visible = false;
+            if ((string)Session["logedin"] == "loged_in")
+            {
+                btnlogout.Visible = true;
+                btnregister.Visible = false;
+                btnlogin.Visible = false;
+
+            }
+            else
+            {
+                btnlogout.Visible = false;
+              
+             
+
+            }
+
 
         }
 
@@ -41,6 +57,20 @@ namespace Site
         protected void btnregister_Click(object sender, EventArgs e)
         {
             Response.Redirect("Register.aspx");
+        }
+
+        protected void btnlogout_Click(object sender, EventArgs e)
+        {
+            Session.Remove("logedin");
+            btnregister.Visible = true;
+            btnlogin.Visible = true;
+            btnlogout.Visible = false;
+            Label lbuser = (Label)ContentPlaceHolder1.FindControl("lbuser");
+            lbuser.Visible = false;
+            Label user = (Label)ContentPlaceHolder1.FindControl("user");
+            user.Visible = false;
+            Label sitename = (Label)ContentPlaceHolder1.FindControl("sitename");
+            sitename.Visible = true;
         }
     }
 }
