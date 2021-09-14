@@ -11,6 +11,16 @@ namespace Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["contactus_start"] = "contactus";
+            if (Session["contactus_start"].ToString() == "contactus")
+            {
+                LinkButton linkButton = (LinkButton)Master.FindControl("Contactus");
+                linkButton.Visible = false;
+                TextBox textBox = (TextBox)Master.FindControl("searchbox");
+                textBox.Visible = false;
+                Button button = (Button)Master.FindControl("btnsearch");
+                button.Visible = false;
+            }
 
         }
     }
