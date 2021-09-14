@@ -69,9 +69,47 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="ContactUs.aspx" />
+    <Content Include="images\adventure.jpg" />
+    <Content Include="images\AkashSir.jpg" />
+    <Content Include="images\AnkurSir.jpg" />
+    <Content Include="images\banner.jpg" />
+    <Content Include="images\banner2.jpg" />
+    <Content Include="images\beach-4865786__340.jpg" />
+    <Content Include="images\beaches.jpg" />
+    <Content Include="images\bg-image.png" />
+    <Content Include="images\College.jpg" />
+    <Content Include="images\family.jpg" />
+    <Content Include="images\Films &amp; TV 01-06-2021 10_39_00 AM.jpg" />
+    <Content Include="images\germany.jpg" />
+    <Content Include="images\heritage_tour.jpg" />
+    <Content Include="images\hillstations.jpg" />
+    <Content Include="images\honeymoon.jpg" />
+    <Content Include="images\ind.jpg" />
+    <Content Include="images\italy.jpg" />
+    <Content Include="images\LuckyMam.jpg" />
+    <Content Include="images\NehaMam.jpg" />
+    <Content Include="images\NidhiMam.jpg" />
+    <Content Include="images\ny.jpg" />
+    <Content Include="images\pic.jpg" />
+    <Content Include="images\pubg.jpg" />
+    <Content Include="images\slider1.jpg" />
+    <Content Include="images\slider2.jpg" />
+    <Content Include="images\slider3.jpg" />
+    <Content Include="images\slider4.jpg" />
+    <Content Include="images\slider5.jpg" />
+    <Content Include="images\slider6.jpg" />
+    <Content Include="images\spain.jpg" />
+    <Content Include="images\tour-bg.jpg" />
+    <Content Include="images\touristattractions.jpg" />
+    <Content Include="images\trekking.jpg" />
+    <Content Include="images\unitedstates.jpg" />
+    <Content Include="images\user1.jpg" />
+    <Content Include="images\user2.jpg" />
+    <Content Include="images\user3.jpg" />
+    <Content Include="images\weekendgetaways.jpg" />
     <Content Include="Login.aspx" />
-    <Content Include="project.css" />
     <Content Include="Register.aspx" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -130,6 +168,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\sailing-boats-5585743__340.webp" />
     <None Include="packages.config" />
     <Content Include="Tour.Master" />
     <None Include="Web.Debug.config">
@@ -139,9 +178,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -4,10 +4,10 @@
  
        <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         
-           <div>
+           <div class="col-lg-12">
             <br /><br /><br />
             <h1 align="center"> <asp:Label ID="lgheadinglbl" runat="server" Text="Login Page"></asp:Label></h1>
-       <table align="center">
+       <table align="center" class="">
          
            <tr>
                <td>

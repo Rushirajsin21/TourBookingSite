@@ -52,6 +52,18 @@
          <div id="homes">
             
              <asp:Label ID="lbuser" runat="server" Text="Welcome "></asp:Label>
+            <h2><b> <asp:Label ID="lbcategory" runat="server" Text="Category : "></asp:Label></b></h2>
+            
+                <asp:ImageButton ID="cat1mg" runat="server" Height="300px" class="cat" ImageUrl="~/images/beaches.jpg" Width="330px" />
+             <asp:ImageButton ID="cat2img" runat="server" class="cat" ImageUrl="~/images/trekking.jpg"/>
+             <asp:ImageButton ID="cat3img" runat="server" class="cat" ImageUrl="~/images/adventure.jpg" />
+
+             <asp:ImageButton ID="cat4img" runat="server" class="category" ImageUrl="~/images/family.jpg"/>
+             <asp:ImageButton ID="cat5img" runat="server" class="category" ImageUrl="~/images/heritage_tour.jpg"/>
+             <asp:ImageButton ID="cat6img" runat="server" class="category" ImageUrl="~/images/hillstations.jpg"/>
+      
+        <h2><b> <asp:Label ID="lbgallery" runat="server" Text="Gallery : "></asp:Label></b></h2>
+
             
     </div>
        </asp:Content>
