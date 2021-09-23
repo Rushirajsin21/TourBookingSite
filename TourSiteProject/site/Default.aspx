@@ -53,19 +53,32 @@
             
              <asp:Label ID="lbuser" runat="server" Text="Welcome "></asp:Label>
             <h2><b> <asp:Label ID="lbcategory" runat="server" Text="Category : "></asp:Label></b></h2>
-            
-                <asp:ImageButton ID="cat1mg" runat="server" Height="300px" class="cat" ImageUrl="~/images/beaches.jpg" Width="330px" />
-             <asp:ImageButton ID="cat2img" runat="server" class="cat" ImageUrl="~/images/trekking.jpg"/>
-             <asp:ImageButton ID="cat3img" runat="server" class="cat" ImageUrl="~/images/adventure.jpg" />
-
-             <asp:ImageButton ID="cat4img" runat="server" class="category" ImageUrl="~/images/family.jpg"/>
-             <asp:ImageButton ID="cat5img" runat="server" class="category" ImageUrl="~/images/heritage_tour.jpg"/>
-             <asp:ImageButton ID="cat6img" runat="server" class="category" ImageUrl="~/images/hillstations.jpg"/>
-      
-        <h2><b> <asp:Label ID="lbgallery" runat="server" Text="Gallery : "></asp:Label></b></h2>
-
-            
+            <%-- <asp:Repeater ID="Repeater2" runat="server">
+                 <ItemTemplate>
+                     <asp:Label ID="imgnm1" runat="server" align="left" Text='<%#Eval("image_name") %>'></asp:Label>
+                 </ItemTemplate>
+             </asp:Repeater>--%>
+             <br />
+              <asp:Repeater ID="Repeater1" runat="server">
+                
+                 <ItemTemplate>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="imgnm1" runat="server" class="imgnm1"  Text='<%#Eval("image_name") %>'></asp:Label>
+                                    
+                                    <br />
+             <br />   <asp:ImageButton ID="cat1mg" runat="server" Height="300px" class="cat"  Width="330px" ImageUrl='<%#Eval("path") %>' />
+                         </ItemTemplate>
+           </asp:Repeater>
+             
     </div>
+<br />
+    <div class="gallery">
+     <h2><b> <asp:Label ID="lbgallery" runat="server" Text="Gallery : "></asp:Label></b></h2>
+        </div>
+
+
+
+
+    
        </asp:Content>
 <%--       
 

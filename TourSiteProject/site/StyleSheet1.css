@@ -23,6 +23,12 @@
     margin-top: 50px;
   
 }
+.imgnm1 {
+    float: left;
+    margin-left: 300px;
+    margin-top: 1px;
+    
+}
 
 .category {
     border: 1px solid;
@@ -38,14 +44,11 @@
     background-color: black;
     color: white;
     height: 100px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    margin-bottom:0px;
+    /* Height of the footer */
    
-  
-
-
-
-
 }
 
 body {
@@ -60,7 +63,7 @@ body {
 }
 
 #homes {
-    height: 1000px;
+    height: 2000px;
     
 }
 
@@ -73,5 +76,7 @@ body {
     margin:0 auto;
     margin-bottom:100px;
 }
-
+#lbgallery{
+    margin-top:1300px;
+}
 
