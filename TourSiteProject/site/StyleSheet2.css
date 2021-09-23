@@ -12,6 +12,7 @@
 #pose {
     color: red;
 }
+
 .cat {
     border: 1px solid;
     border-width: 4px;
@@ -21,14 +22,9 @@
     width: 330px;
     margin-left: 70px;
     margin-top: 50px;
-  
 }
-.imgnm1 {
-    float: left;
-    margin-left: 300px;
-    margin-top: 1px;
-    
-}
+
+
 
 .category {
     border: 1px solid;
@@ -40,15 +36,14 @@
     margin-left: 70px;
     margin-top: 50px;
 }
+
 #footer {
     background-color: black;
     color: white;
     height: 100px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    width:100%;
+    
     /* Height of the footer */
-   
 }
 
 body {
@@ -64,19 +59,18 @@ body {
 
 #homes {
     height: 2000px;
-    
 }
 
 .us {
     height: 500px;
     border: 1px solid;
-    border-width:2px;
-    border-radius:100px;
-    width:600px;
-    margin:0 auto;
-    margin-bottom:100px;
-}
-#lbgallery{
-    margin-top:1300px;
+    border-width: 2px;
+    border-radius: 100px;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 100px;
 }
 
+#lbgallery {
+    margin-top: 1300px;
+}

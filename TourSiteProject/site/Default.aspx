@@ -61,12 +61,9 @@
              <br />
               <asp:Repeater ID="Repeater1" runat="server">
                 
-                 <ItemTemplate>
-                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="imgnm1" runat="server" class="imgnm1"  Text='<%#Eval("image_name") %>'></asp:Label>
-                                    
-                                    <br />
-             <br />   <asp:ImageButton ID="cat1mg" runat="server" Height="300px" class="cat"  Width="330px" ImageUrl='<%#Eval("path") %>' />
-                         </ItemTemplate>
+            <ItemTemplate>
+                <asp:ImageButton ID="cat1mg" runat="server" Height="300px" class="cat"  Width="330px" ImageUrl='<%#Eval("path") %>'  AlternateText='<%#Eval("image_name") %>' />
+                    </ItemTemplate>
            </asp:Repeater>
              
     </div>
@@ -79,8 +76,9 @@
 
 
     
-       </asp:Content>
+       
 <%--       
 
 </body>
 </html>--%>
+    </asp:Content>
