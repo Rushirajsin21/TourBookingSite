@@ -37,12 +37,13 @@
     margin-top: 50px;
 }
 
-#footer {
+#footer1 {
     background-color: black;
     color: white;
     height: 100px;
-    width:100%;
-    
+    width: 100%;
+    position: page;
+    bottom: 0;
     /* Height of the footer */
 }
 
@@ -57,9 +58,10 @@ body {
     height: 179px;
 }
 
-#homes {
-    height: 2000px;
+#homes1 {
+    height: auto;
 }
+
 
 .us {
     height: 500px;
@@ -73,4 +75,9 @@ body {
 
 #lbgallery {
     margin-top: 1300px;
+}
+
+.gallery1 {
+    height: auto;
+    width: 100%;
 }

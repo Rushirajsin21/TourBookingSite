@@ -46,36 +46,57 @@
     </form>--%>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="header">
-    <h1 id="pose"> <asp:Label ID="heading" runat="server" Text="Welcome To Our Site"></asp:Label><asp:Label ID="sitename" runat="server" Text=" Tour Trip"></asp:Label> <asp:Label ID="user" runat="server" Text=" user"></asp:Label> &#9992;</h1>
+    <h1 id="pose"> <asp:Label ID="heading" runat="server" Text="Welcome To Our Site"></asp:Label><asp:Label ID="sitename" runat="server" Text=" Tour Trip"></asp:Label> <asp:Label ID="user" runat="server" Text=" user"></asp:Label><i style="color:white;" class="fa fa-plane fa-lg" aria-hidden="true"></i>
+</h1>
             </section>
    
-         <div id="homes">
-            
-             <asp:Label ID="lbuser" runat="server" Text="Welcome "></asp:Label>
-            <h2><b> <asp:Label ID="lbcategory" runat="server" Text="Category : "></asp:Label></b></h2>
-            <%-- <asp:Repeater ID="Repeater2" runat="server">
+        
+    <div id="homes1">
+        <asp:Label ID="lbuser" runat="server" Text="Welcome "></asp:Label>
+        <h2><b>
+            <asp:Label ID="lbcategory" runat="server" Text="Category : "></asp:Label></b></h2>
+        <%-- <asp:Repeater ID="Repeater2" runat="server">
                  <ItemTemplate>
                      <asp:Label ID="imgnm1" runat="server" align="left" Text='<%#Eval("image_name") %>'></asp:Label>
                  </ItemTemplate>
              </asp:Repeater>--%>
-             <br />
-              <asp:Repeater ID="Repeater1" runat="server">
-                
+        <br />
+        <asp:Repeater ID="Repeater1" runat="server">
+
+
             <ItemTemplate>
-                <asp:ImageButton ID="cat1mg" runat="server" Height="300px" class="cat"  Width="330px" ImageUrl='<%#Eval("path") %>'  AlternateText='<%#Eval("image_name") %>' />
-                    </ItemTemplate>
-           </asp:Repeater>
-             
+                &nbsp;
+               <a href='<%#Eval("path") %>'>
+                   <asp:Image ID="cat1mg" runat="server" Height="200px" Width="230px" ImageUrl='<%#Eval("path") %>' Style="margin-left: 70px; margin-top: 50px; border-radius: 50px; border: 1px solid; border-width: 4px;" AlternateText='<%#Eval("image_name") %>' />
+
+               </a>&nbsp;
+                <asp:Label ID="Label1" runat="server" Text='<%#Eval("image_name") %>' Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Medium"></asp:Label>
+            </ItemTemplate>
+
+
+
+        </asp:Repeater>
     </div>
-<br />
-    <div class="gallery">
-     <h2><b> <asp:Label ID="lbgallery" runat="server" Text="Gallery : "></asp:Label></b></h2>
+   
+    <br />
+    <div class="gallery1">
+<h2>
+        <asp:Label ID="Label2" runat="server" Text="Gallery"></asp:Label></h2>
+
+   
+        <asp:Repeater ID="Repeater2" runat="server">
+            <ItemTemplate>
+                <a href="#">
+                    <asp:Image ID="Image1" runat="server" Style="margin-left:70px; margin-top:50px; border-radius:50px; border:1px solid; border-width:4px;"
+                        ImageUrl='<%#Eval("imgpath") %>' Height="400px" Width="430px" />
+                </a>&nbsp;
+                <asp:Label ID="Label3" runat="server" Text='<%#Eval("image_name") %>' Font-Bold="True" Font-Italic="True" Font-Size="Medium"></asp:Label>
+                &nbsp;
+            </ItemTemplate>
+            
+        </asp:Repeater>
+        <br />
         </div>
-
-
-
-
-    
        
 <%--       
 

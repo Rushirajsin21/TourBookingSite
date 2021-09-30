@@ -47,16 +47,15 @@ namespace Site
             da.Fill(dt);
             Repeater1.DataSource = dt;
             Repeater1.DataBind();
-            //Repeater2.DataSource = dt;
-            //Repeater2.DataBind();
-            //for (int i = 0; i <= dt.Rows.Count; i++)
-            //{
+            string sql2 = "select * from gallery";
+            SqlDataAdapter da2 = new SqlDataAdapter(sql2,DBclass.cn);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            Repeater2.DataSource = dt2;
+            Repeater2.DataBind();
 
-            //    cat1mg.ImageUrl = (string)dt.Rows[i]["path"];
-                
-            //}
-                
-            
+
+
         }
     }
 }

@@ -70,6 +70,12 @@
     <Content Include="AboutUs.aspx" />
     <Content Include="admin.aspx" />
     <Content Include="ContactUs.aspx" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\ion.rangeSlider.min.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\style.css" />
+    <Content Include="images\admin_icon.png" />
     <Content Include="images\adventure.jpg" />
     <Content Include="images\AkashSir.jpg" />
     <Content Include="images\AnkurSir.jpg" />
@@ -108,9 +114,13 @@
     <Content Include="images\user2.jpg" />
     <Content Include="images\user3.jpg" />
     <Content Include="images\weekendgetaways.jpg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\ion.rangeSlider.min.js" />
+    <Content Include="js\jquery-3.4.1.min.js" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
-    <Content Include="StyleSheet2.css" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />
     <Content Include="Default.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -177,6 +187,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\sailing-boats-5585743__340.webp" />
+    <Content Include="css\style.css.map" />
+    <Content Include="css\style.scss" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\Helvetica\Helvetica-Bold.ttf" />
+    <Content Include="fonts\Helvetica\Helvetica.ttf" />
+    <Content Include="fonts\Helvetica\HelveticaLt.ttf" />
     <None Include="packages.config" />
     <Content Include="Tour.Master" />
     <None Include="Web.Debug.config">
