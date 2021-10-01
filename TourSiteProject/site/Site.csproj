@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="admin.aspx" />
+    <Content Include="adminlogin.aspx" />
     <Content Include="ContactUs.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -139,6 +140,13 @@
     </Compile>
     <Compile Include="admin.aspx.designer.cs">
       <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminlogin.aspx.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminlogin.aspx.designer.cs">
+      <DependentUpon>adminlogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>

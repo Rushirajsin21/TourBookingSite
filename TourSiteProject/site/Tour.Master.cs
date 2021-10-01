@@ -72,5 +72,10 @@ namespace Site
             Label sitename = (Label)ContentPlaceHolder1.FindControl("sitename");
             sitename.Visible = true;
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("adminlogin.aspx");
+        }
     }
 }

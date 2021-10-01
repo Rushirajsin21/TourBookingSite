@@ -53,12 +53,14 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
            </asp:ContentPlaceHolder>      
         </div>
-    </form>
+    
  
     
      <footer id="footer1"  align="center">
            
-            &copy; All Right Reserved By <i><b>Tour Trip</b></i> </footer>
-    
+            &copy; All Right Reserved By <i><b>Tour Trip</b></i><br /><br />
+         <asp:Button ID="admin_login" runat="server" Text="Admin Login" class="btn btn-warning" style="margin-left:1100px;" OnClick="Button1_Click" />
+     </footer>
+    </form>
 </body>
 </html>
