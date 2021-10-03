@@ -235,9 +235,9 @@
                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("cat_img") %>' Height="50px" Width="50px"/></td>
                            <td><%#Eval("location_1") %></td>
                            <td><%#Eval("location_2") %></td>
-                           <td><a   href="editcategory.aspx"  CausesValidation="False">Edit
+                           <td><a   href="editcategory.aspx?id=<%#Eval("cat_name")%>"  CausesValidation="False">Edit
 </a></td>
-                           <td><a href="deletecategory.aspx"  >Deactive</a></td>
+                           <td><a href="deletecategory.aspx?name=<%#Eval("cat_name") %>"  >Deactive</a></td>
                            
                        </tr>
                   
