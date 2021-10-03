@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminlogin.aspx.cs" Inherits="Site.adminlogin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminlogin.aspx.cs" Inherits="Site.adminlogin" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
 
@@ -29,6 +29,7 @@
              <div id="head"><h1 align="center">Admin Login Page</h1></div>
             <div class="col-lg-12">
             <br /><br /><br />
+                
                
             <h1 align="center"> <asp:Label ID="lgheadinglbl" runat="server" Text="Login Page"></asp:Label></h1>
        <table align="center" class="">
@@ -73,8 +74,9 @@
            </tr>
            <tr>
                <td colspan="2" align="center">
-                   <asp:LinkButton ID="reglink" runat="server" OnClick="reglink_Click" CausesValidation="False"><h4><u>Register Here</u></h4></asp:LinkButton>
-               </td>
+                                      <asp:LinkButton ID="home" runat="server"  CausesValidation="False" OnClick="home_Click"><h4><u>Goto Home</u></h4></asp:LinkButton>
+
+                   &nbsp;</td>
            </tr>
         
        </table>
@@ -86,7 +88,7 @@
                        Your are not registered " ForeColor="Red"></asp:Label></h1>
 </div>
 
-        </div><br /><br />
+        </div>
          <footer id="footer1"  align="center">
            <br />
             &copy; All Right Reserved By <i><b>Tour Trip</b></i><br /><br />

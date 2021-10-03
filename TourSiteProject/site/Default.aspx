@@ -66,11 +66,11 @@
 
             <ItemTemplate>
                 &nbsp;
-               <a href='<%#Eval("path") %>'>
-                   <asp:Image ID="cat1mg" runat="server" Height="200px" Width="230px" ImageUrl='<%#Eval("path") %>' Style="margin-left: 70px; margin-top: 50px; border-radius: 50px; border: 1px solid; border-width: 4px;" AlternateText='<%#Eval("image_name") %>' />
+               <a href='<%#Eval("cat_img") %>'>
+                   <asp:Image ID="cat1mg" runat="server" Height="200px" Width="230px" ImageUrl='<%#Eval("cat_img") %>' Style="margin-left: 70px; margin-top: 50px; border-radius: 50px; border: 1px solid; border-width: 4px;" AlternateText='<%#Eval("cat_name") %>' />
 
                </a>&nbsp;
-                <asp:Label ID="Label1" runat="server" Text='<%#Eval("image_name") %>' Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Medium"></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text='<%#Eval("cat_name") %>' Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Medium"></asp:Label>
             </ItemTemplate>
 
 
@@ -88,9 +88,9 @@
             <ItemTemplate>
                 <a href="#">
                     <asp:Image ID="Image1" runat="server" Style="margin-left:70px; margin-top:50px; border-radius:50px; border:1px solid; border-width:4px;"
-                        ImageUrl='<%#Eval("imgpath") %>' Height="400px" Width="430px" />
+                        ImageUrl='<%#Eval("gallery_imgpath") %>' Height="400px" Width="430px" />
                 </a>&nbsp;
-                <asp:Label ID="Label3" runat="server" Text='<%#Eval("image_name") %>' Font-Bold="True" Font-Italic="True" Font-Size="Medium"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text='<%#Eval("gallery_image_name") %>' Font-Bold="True" Font-Italic="True" Font-Size="Medium"></asp:Label>
                 &nbsp;
             </ItemTemplate>
             

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="admin.aspx.cs" Inherits="Site.admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeBehind="admin.aspx.cs" Inherits="Site.admin" EnableEventValidation="false" %>
 
 
 
@@ -29,7 +29,8 @@
             width:15%;
             color:white;
             background-color:black;
-            height:100%;
+            
+            height:200%;
             border:1px solid;
             border-width:2px;
             border-color:aqua;
@@ -49,11 +50,11 @@
         #admins1{
             float:right;
             width:85%;
-            height:90%;
+            height:100%;
             background-color:white;
             border-radius:10px;
-            border:1px solid;
-            border-width:2px;
+            /*border:1px solid;
+            border-width:2px;*/
             border-color:black;
         }
         #category1{
@@ -62,8 +63,8 @@
             height:90%;
             background-color:white;
             border-radius:10px;
-            border:1px solid;
-            border-width:2px;
+            /*border:1px solid;
+            border-width:2px;*/
             border-color:black;
         }
         #gallery1{
@@ -72,8 +73,8 @@
             height:90%;
             background-color:white;
             border-radius:10px;
-            border:1px solid;
-            border-width:2px;
+          /*  border:1px solid;
+            border-width:2px;*/
             border-color:black;
         }
     </style>
@@ -87,16 +88,21 @@
            <br /><br />
            <h4 align="center"> Dashboard</h4>
            <br />
-           <div id="admin1" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user fa-lg" aria-hidden="true">&nbsp;<asp:LinkButton ID="adminslink" runat="server" ForeColor="White" OnClick="adminslink_Click"> Add Admins</asp:LinkButton></i>
+           <div id="admin1" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-user fa-lg" aria-hidden="true">&nbsp;<asp:LinkButton ID="adminslink" runat="server" ForeColor="White" OnClick="adminslink_Click" CausesValidation="False"> Add Admins</asp:LinkButton></i>
 </div>
            <br />
-           <div id="admin_category" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-list-alt fa-lg" aria-hidden="true"> <asp:LinkButton ID="categorylink" runat="server" ForeColor="White" OnClick="categorylink_Click">Category</asp:LinkButton></i>
+           <div id="admin_category" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-list-alt fa-lg" aria-hidden="true"> <asp:LinkButton ID="categorylink" runat="server" ForeColor="White" OnClick="categorylink_Click" CausesValidation="False">Category</asp:LinkButton></i>
                </div>
            <br />
            <div id="admin_gallery_image" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-picture-o fa-lg" aria-hidden="true">
-               <asp:LinkButton ID="gallerylink" runat="server" ForeColor="White" OnClick="gallerylink_Click">Gallery</asp:LinkButton></i>
+               <asp:LinkButton ID="gallerylink" runat="server" ForeColor="White" OnClick="gallerylink_Click" CausesValidation="False">Gallery</asp:LinkButton></i>
+               </div>
+                <br />
+           <div id="logout" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out fa-lg">
+               <asp:LinkButton ID="logoutlink" runat="server" ForeColor="White" OnClick="logoutlink_Click" CausesValidation="False" >Logout</asp:LinkButton></i>
+               </div>
+               
 
-</div>
        </div>
         <div id="heade" runat="server">
             <h1 align="center" runat="server"> Admin Panel</h1>
@@ -122,7 +128,7 @@
   <div class="mb-3 col-12">
     <label for="exampleInputPassword1" class="form-label">Password:<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="password" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
       </label>
-    &nbsp;<asp:TextBox ID="password" runat="server" type="password" class="form-control" ></asp:TextBox>
+    &nbsp;<asp:TextBox ID="password" runat="server"  class="form-control" ></asp:TextBox>
   </div>
                <div class="mb-3 col-12">
     <label for="exampleInputPassword1" class="form-label">Retype Password:<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="Retypepassword" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -138,11 +144,110 @@
            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password Doesn't Match" ControlToCompare="password" ControlToValidate="Retypepassword" ForeColor="Red"></asp:CompareValidator>
       
            <br />
-           <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+           <h2 align="center"><asp:Label ID="Label1" runat="server" Text=""></asp:Label></h2>
+           <br />
+          <%-- <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
+               <Columns>
+                   <asp:BoundField DataField="admin_name" HeaderText="Admin Name"  />
+                   <asp:BoundField DataField="admin_role" HeaderText="Admin_Role" />
+                   <asp:ButtonField Text="Edit" />
+                   <asp:ButtonField Text="Deactive" />
+                   
+               </Columns>
+           </asp:GridView>--%>
+           <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
+               <HeaderTemplate>
+                   <table align="center" border="1" cellpadding="10px">
+                       <tr>
+                           <th>Admin Name</th>
+                           <th>Admin Role</th>
+                           <th>Admin Password</th>
+                       </tr>
+               </HeaderTemplate>
+               <ItemTemplate>
+                       <tr>
+                           <td  ><asp:LinkButton ID="admin_nm" runat="server"></asp:LinkButton><%#Eval("admin_name") %> </td>
+                           <td ><%#Eval("admin_role") %></td>
+                           <td><%#Eval("admin_password") %></td>
+                           <td><a   href="editadmin.aspx?id=<%#Eval("admin_name") %>"  CausesValidation="False">Edit
+</a></td>
+                           <td><a href="deactive.aspx?deactive=<%#Eval("admin_name") %>"  >Deactive</a></td>
+                           
+                       </tr>
+                  
+               </ItemTemplate>
+               <FooterTemplate>
+                   </table>
+               </FooterTemplate>
+           </asp:Repeater>
+
       
       </div>
            
-       <div id="category1" runat="server"></div>
+       <div id="category1" runat="server">
+           <h1 align="center">Add Category</h1>
+            <div class="mb-3 col-12">
+    <label for="exampleInputEmail1" class="form-label">Category Name:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="admin_name" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+&nbsp;<asp:TextBox ID="cat_name" runat="server"  class="form-control"  aria-describedby="emailHelp"></asp:TextBox>
+  </div>
+               <div class="mb-3 col-12">
+                       <label for="exampleInputPassword1" class="form-label">Category Image:<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="fileupload" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+</label>
+                   <asp:FileUpload ID="fileupload" runat="server" class="form-control" type="file"  />
+                   &nbsp;
+
+               </div>
+  <div class="mb-3 col-12">
+    <label for="exampleInputPassword1" class="form-label">Location 1:<asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="loc_1" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+      </label>
+    &nbsp;<asp:TextBox ID="loc_1" runat="server"  class="form-control" ></asp:TextBox>
+  </div>
+               <div class="mb-3 col-12">
+    <label for="exampleInputPassword1" class="form-label">location 2:<asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="loc_2" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                   </label>
+    &nbsp;<asp:TextBox ID="loc_2" runat="server"  class="form-control" ></asp:TextBox>
+  </div>
+                &nbsp;&nbsp;&nbsp;&nbsp
+
+  <asp:Button ID="cat_add" runat="server" Text="Add" type="submit" class="btn btn-primary" Width="96px" OnClick="cat_add_Click" ></asp:Button>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <asp:Button ID="cat_clear" runat="server" Text="Clear" class="btn btn-danger" Width="95px" CausesValidation="False" OnClick="cat_clear_Click" />
+      
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+           <br /><br />
+           <h3 align="center"> <asp:Label ID="catmsg" runat="server" Text="" Visible="false"></asp:Label> <asp:Label ID="imgmsg" runat="server" Visible="False" ForeColor="Red"></asp:Label></h3>
+
+           <asp:Repeater ID="Repeater2" runat="server" OnItemCommand="Repeater1_ItemCommand">
+               <HeaderTemplate>
+                   <table align="center" border="1" cellpadding="10px" >
+                       <tr>
+                           <th>Category Name</th>
+                           <th>Category Image</th>
+                           <th>Location 1</th>
+                           <th>Location 2</th>
+                       </tr>
+               </HeaderTemplate>
+               <ItemTemplate>
+                       <tr>
+                           <td  ><asp:LinkButton ID="admin_nm" runat="server"></asp:LinkButton><%#Eval("cat_name") %> </td>
+                           <td >
+                               <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("cat_img") %>' Height="50px" Width="50px"/></td>
+                           <td><%#Eval("location_1") %></td>
+                           <td><%#Eval("location_2") %></td>
+                           <td><a   href="editcategory.aspx"  CausesValidation="False">Edit
+</a></td>
+                           <td><a href="deletecategory.aspx"  >Deactive</a></td>
+                           
+                       </tr>
+                  
+               </ItemTemplate>
+               <FooterTemplate>
+                   </table>
+               </FooterTemplate>
+           </asp:Repeater>
+
+       </div>
        <div id="gallery1" runat="server"></div>
    </form>
 </body>

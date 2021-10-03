@@ -16,10 +16,7 @@ namespace Site
             {
                 LinkButton linkButton = (LinkButton)Master.FindControl("Aboutus");
                 linkButton.Visible = false;
-                TextBox textBox = (TextBox)Master.FindControl("searchbox");
-                textBox.Visible = false;
-                Button button = (Button)Master.FindControl("btnsearch");
-                button.Visible = false;
+                
             }
 
         }

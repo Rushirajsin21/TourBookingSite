@@ -60,24 +60,6 @@ namespace Site
         protected global::System.Web.UI.WebControls.LinkButton Contactus;
 
         /// <summary>
-        /// searchbox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox searchbox;
-
-        /// <summary>
-        /// btnsearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsearch;
-
-        /// <summary>
         /// btnlogin control.
         /// </summary>
         /// <remarks>
@@ -96,6 +78,15 @@ namespace Site
         protected global::System.Web.UI.WebControls.Button btnregister;
 
         /// <summary>
+        /// admin_login control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button admin_login;
+
+        /// <summary>
         /// btnlogout control.
         /// </summary>
         /// <remarks>
@@ -112,14 +103,5 @@ namespace Site
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-
-        /// <summary>
-        /// admin_login control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button admin_login;
     }
 }

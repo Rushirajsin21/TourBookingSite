@@ -33,15 +33,15 @@ namespace Site
         {
             Session["lgemails"] = lgemail.Text;
             Session["lgpassword"] = lgpassword.Text;
-            string sql = "select admin_name from admin where admin_name='" + Session["lgemails"].ToString() + "' and admin_password='" + Session["lgpassword"].ToString() + "'";
+            string sql = "select admin_role from admin where admin_name='" + Session["lgemails"].ToString() + "' and admin_password='" + Session["lgpassword"].ToString() + "' and status=1";
             SqlDataAdapter da = new SqlDataAdapter(sql, DBclass.cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Session["user"] = dt.Rows[0]["admin_name"];
+            Session["admin_role"] = dt.Rows[0]["admin_role"];
             if (dt.Rows.Count > 0)
             {
-                Session["logedin"] = "loged_in";
-                Session["user"] = dt.Rows[0]["admin_name"];
+                Session["admin_logedin"] = "loged_in";
+                Session["admin_role"] = dt.Rows[0]["admin_role"];
                 //lgmsg.Visible = true;
                 Response.Redirect("admin.aspx");
                 //Button btn1 = (Button)Master.FindControl("btnregister");
@@ -60,6 +60,12 @@ namespace Site
                 btn1.Visible = true;
 
             }
+        }
+
+        protected void home_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Default.aspx");
+
         }
     }
 }

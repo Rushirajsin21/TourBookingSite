@@ -20,9 +20,7 @@ namespace Site
             {
                 Button button = (Button)Master.FindControl("btnregister");
                 button.Visible = false;
-                TextBox textBox = (TextBox)Master.FindControl("searchbox");
-                textBox.Visible = false;
-                Button button1 = (Button)Master.FindControl("btnsearch");
+                Button button1 = (Button)Master.FindControl("admin_login");
                 button1.Visible = false;
                 rgmessage.Visible = false;
                 rgmessage2.Visible = false;

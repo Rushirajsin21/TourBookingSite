@@ -19,10 +19,9 @@ namespace Site
             {
                 Button button = (Button)Master.FindControl("btnlogin");
                 button.Visible = false;
-                TextBox textBox = (TextBox)Master.FindControl("searchbox");
-                textBox.Visible = false;
-                Button button1 = (Button)Master.FindControl("btnsearch");
+                Button button1 = (Button)Master.FindControl("admin_login");
                 button1.Visible = false;
+            
                 lgmsg.Visible = false;
                 lgmsg2.Visible = false;
 
