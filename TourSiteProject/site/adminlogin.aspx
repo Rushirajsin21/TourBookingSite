@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminlogin.aspx.cs" Inherits="Site.adminlogin" EnableEventValidation="false" %>
 
 <!DOCTYPE html>
+<%--LAPTOP-J0FBUPVC\SQLEXPRESS  server name--%>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
