@@ -34,6 +34,13 @@ namespace Site
             da2.Fill(dt2);
             Repeater2.DataSource = dt2;
             Repeater2.DataBind();
+            string sql3 = "select * from gallery where status=1";
+            SqlDataAdapter da3 = new SqlDataAdapter(sql3,DBclass.cn);
+            DataTable dt3 = new DataTable();
+            da3.Fill(dt3);
+            Repeater3.DataSource = dt3;
+            Repeater3.DataBind();
+
 
         }
 
@@ -144,7 +151,7 @@ namespace Site
                 fileupload.SaveAs(path + fileupload.FileName);
                 string st = "~/images/";
                 string img = st + fileupload.FileName;
-                string sql2 = "insert into category values('" + cat_name.Text + "' , '" + img + "' , '" + loc_1.Text + "' , '" + loc_2.Text + "')";
+                string sql2 = "insert into category values('" + cat_name.Text + "' , '" + img + "' , '" + loc_1.Text + "' , '" + loc_2.Text + "' , 1)";
                 SqlDataAdapter da2 = new SqlDataAdapter(sql2, DBclass.cn);
                 DataTable dt2 = new DataTable();
                 da2.Fill(dt2);
@@ -158,6 +165,35 @@ namespace Site
                     catmsg.Text = "Some Error occured";
                 }
             }
+        }
+
+        protected void gallery_add_Click(object sender, EventArgs e)
+        {
+            string path = Server.MapPath("~/images/");
+            fileupload2.SaveAs(path + fileupload2.FileName);
+            string st = "~/images/";
+            string img = st + fileupload2.FileName;
+            string sql = "insert into gallery values('"+place_name.Text+"','"+img+"',1)";
+            SqlDataAdapter da2 = new SqlDataAdapter(sql,DBclass.cn);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            if(!da2.Equals(null))
+            {
+                galmsg.Text = "Place Added";
+                galmsg.Visible = true;
+            }
+            else
+            {
+                galmsg.Text = "Place Not added";
+                galmsg.Visible = true;
+            }
+
+        }
+
+        protected void gallery_clear_Click(object sender, EventArgs e)
+        {
+            place_name.Text = "";
+            fileupload2.Dispose();
         }
     }
 }

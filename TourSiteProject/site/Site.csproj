@@ -78,8 +78,10 @@
     <Content Include="css\style.css" />
     <Content Include="deactive.aspx" />
     <Content Include="deletecategory.aspx" />
+    <Content Include="deletegallery.aspx" />
     <Content Include="editadmin.aspx" />
     <Content Include="editcategory.aspx" />
+    <Content Include="editgallery.aspx" />
     <Content Include="images\admin_icon.png" />
     <Content Include="images\adventure.jpg" />
     <Content Include="images\AkashSir.jpg" />
@@ -174,6 +176,13 @@
     <Compile Include="deletecategory.aspx.designer.cs">
       <DependentUpon>deletecategory.aspx</DependentUpon>
     </Compile>
+    <Compile Include="deletegallery.aspx.cs">
+      <DependentUpon>deletegallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deletegallery.aspx.designer.cs">
+      <DependentUpon>deletegallery.aspx</DependentUpon>
+    </Compile>
     <Compile Include="editadmin.aspx.cs">
       <DependentUpon>editadmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,6 +196,13 @@
     </Compile>
     <Compile Include="editcategory.aspx.designer.cs">
       <DependentUpon>editcategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editgallery.aspx.cs">
+      <DependentUpon>editgallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editgallery.aspx.designer.cs">
+      <DependentUpon>editgallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

@@ -47,7 +47,7 @@ namespace Site
             da.Fill(dt);
             Repeater1.DataSource = dt;
             Repeater1.DataBind();
-            string sql2 = "select * from gallery";
+            string sql2 = "select * from gallery where status=1";
             SqlDataAdapter da2 = new SqlDataAdapter(sql2,DBclass.cn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
