@@ -77,7 +77,9 @@
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
     <Content Include="deactive.aspx" />
+    <Content Include="deletecategory.aspx" />
     <Content Include="editadmin.aspx" />
+    <Content Include="editcategory.aspx" />
     <Content Include="images\admin_icon.png" />
     <Content Include="images\adventure.jpg" />
     <Content Include="images\AkashSir.jpg" />
@@ -165,12 +167,26 @@
     <Compile Include="deactive.aspx.designer.cs">
       <DependentUpon>deactive.aspx</DependentUpon>
     </Compile>
+    <Compile Include="deletecategory.aspx.cs">
+      <DependentUpon>deletecategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deletecategory.aspx.designer.cs">
+      <DependentUpon>deletecategory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="editadmin.aspx.cs">
       <DependentUpon>editadmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="editadmin.aspx.designer.cs">
       <DependentUpon>editadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editcategory.aspx.cs">
+      <DependentUpon>editcategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editcategory.aspx.designer.cs">
+      <DependentUpon>editcategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

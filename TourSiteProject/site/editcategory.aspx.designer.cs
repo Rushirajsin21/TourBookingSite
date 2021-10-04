@@ -96,13 +96,13 @@ namespace Site
         protected global::System.Web.UI.WebControls.TextBox loc_2;
 
         /// <summary>
-        /// cat_add control.
+        /// cat_edit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cat_add;
+        protected global::System.Web.UI.WebControls.Button cat_edit;
 
         /// <summary>
         /// cat_clear control.
@@ -112,5 +112,23 @@ namespace Site
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button cat_clear;
+
+        /// <summary>
+        /// catmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label catmsg;
+
+        /// <summary>
+        /// imgmsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label imgmsg;
     }
 }

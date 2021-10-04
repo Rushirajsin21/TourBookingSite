@@ -10,9 +10,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
-               <h1 align="center">Add Category</h1>
+              <h1 align="center">Edit Category</h1>
             <div class="mb-3 col-12">
-    <label for="exampleInputEmail1" class="form-label">Category Name:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="admin_name" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+    <label for="exampleInputEmail1" class="form-label">Category Name:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="cat_name" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
 &nbsp;<asp:TextBox ID="cat_name" runat="server"  class="form-control"  aria-describedby="emailHelp"></asp:TextBox>
   </div>
                <div class="mb-3 col-12">
@@ -34,9 +34,11 @@
   </div>
                 &nbsp;&nbsp;&nbsp;&nbsp
 
-  <asp:Button ID="cat_add" runat="server" Text="Add" type="submit" class="btn btn-primary" Width="96px" OnClick="cat_add_Click" ></asp:Button>
+  <asp:Button ID="cat_edit" runat="server" Text="Edit" type="submit" class="btn btn-primary" Width="96px" OnClick="cat_add_Click" ></asp:Button>
                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                <asp:Button ID="cat_clear" runat="server" Text="Clear" class="btn btn-danger" Width="95px" CausesValidation="False" OnClick="cat_clear_Click" />
+        <br /><br />
+           <h3 align="center"> <asp:Label ID="catmsg" runat="server" Text="" Visible="false"></asp:Label> <asp:Label ID="imgmsg" runat="server" Visible="False" ForeColor="Red"></asp:Label></h3>
         </div>
     </form>
 </body>

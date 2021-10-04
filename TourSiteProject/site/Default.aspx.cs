@@ -41,7 +41,7 @@ namespace Site
                 user.Text = Session["user"].ToString();
                 lbuser.Text += Session["user"].ToString();
             }
-            string sql = "select cat_img, cat_name from category";
+            string sql = "select cat_img, cat_name from category where status=1";
             SqlDataAdapter da = new SqlDataAdapter(sql, DBclass.cn);
             DataTable dt = new DataTable();
             da.Fill(dt);

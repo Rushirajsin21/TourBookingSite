@@ -28,7 +28,7 @@ namespace Site
             da1.Fill(dt1);
             Repeater1.DataSource = dt1;
             Repeater1.DataBind();
-            string sql="select * from category";
+            string sql="select * from category where status=1";
             SqlDataAdapter da2 = new SqlDataAdapter(sql,DBclass.cn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
