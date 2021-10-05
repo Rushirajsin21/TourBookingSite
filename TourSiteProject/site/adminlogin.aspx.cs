@@ -56,8 +56,7 @@ namespace Site
             else
             {
                 lgmsg2.Visible = true;
-                Button btn1 = (Button)Master.FindControl("btnregister");
-                btn1.Visible = true;
+                
 
             }
         }

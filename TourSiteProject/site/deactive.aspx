@@ -18,13 +18,7 @@
                        <label for="exampleInputPassword1" class="form-label">Admin Role:<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="adminrole" ErrorMessage="*" ForeColor="Red"  ></asp:RequiredFieldValidator>
                        </label>
                    &nbsp;<asp:TextBox ID="adminrole" runat="server" class="form-control"  ReadOnly="true"></asp:TextBox>
-                   <%--<asp:DropDownList ID="admin_role" runat="server" class="form-control" >
-                       <asp:ListItem>Select Admin Role</asp:ListItem>
-                       <asp:ListItem>Super Admin</asp:ListItem>
-                       <asp:ListItem>Admin</asp:ListItem>
-                       <asp:ListItem>Editor</asp:ListItem>
-                       <asp:ListItem>Reader</asp:ListItem>
-                       </asp:DropDownList>--%>
+                  
 
                </div>
   <div class="mb-3 col-12">
@@ -48,7 +42,6 @@
         </div>
            
 
-        </div>
     </form>
 </body>
 </html>
