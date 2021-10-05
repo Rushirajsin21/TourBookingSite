@@ -32,6 +32,16 @@
                    </label>
     &nbsp;<asp:TextBox ID="loc_2" runat="server"  class="form-control" ></asp:TextBox>
   </div>
+             <div class="mb-3 col-12">
+    <label for="exampleInputPassword1" class="form-label">location1 Price :<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="loc1_price" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                   </label>
+    &nbsp;<asp:TextBox ID="loc1_price" runat="server"  class="form-control" ></asp:TextBox>
+  </div>
+            <div class="mb-3 col-12">
+    <label for="exampleInputPassword1" class="form-label">location2 Price:<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="loc2_price" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                   </label>
+    &nbsp;<asp:TextBox ID="loc2_price" runat="server"  class="form-control" ></asp:TextBox>
+  </div>
                 &nbsp;&nbsp;&nbsp;&nbsp
 
   <asp:Button ID="cat_edit" runat="server" Text="Edit" type="submit" class="btn btn-primary" Width="96px" OnClick="cat_add_Click" ></asp:Button>

@@ -18,10 +18,7 @@ namespace Site
             lgmsg2.Visible = false;
         }
 
-        protected void reglink_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Register.aspx");
-        }
+       
 
         protected void lgbtnClear_Click(object sender, EventArgs e)
         {
@@ -37,7 +34,6 @@ namespace Site
             SqlDataAdapter da = new SqlDataAdapter(sql, DBclass.cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Session["admin_role"] = dt.Rows[0]["admin_role"];
             if (dt.Rows.Count > 0)
             {
                 Session["admin_logedin"] = "loged_in";
@@ -55,6 +51,7 @@ namespace Site
             }
             else
             {
+                lgmsg2.Text = "Invalid Username or Passsword";
                 lgmsg2.Visible = true;
                 
 

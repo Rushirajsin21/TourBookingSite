@@ -31,6 +31,7 @@
                    </label>
     &nbsp;<asp:TextBox ID="Retypepassword" runat="server"  class="form-control" ReadOnly="true" ></asp:TextBox>
   </div>
+            
                 &nbsp;&nbsp;&nbsp;&nbsp
 
  

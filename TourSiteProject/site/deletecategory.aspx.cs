@@ -23,6 +23,9 @@ namespace Site
             Image1.ImageUrl = (string)dt1.Rows[0]["cat_img"];
             loc_1.Text = (string)dt1.Rows[0]["location_1"];
             loc_2.Text = (string)dt1.Rows[0]["location_2"];
+            loc1_price.Text = (string)dt1.Rows[0]["location1_price"];
+            loc2_price.Text = (string)dt1.Rows[0]["location2_price"];
+
 
 		}
 

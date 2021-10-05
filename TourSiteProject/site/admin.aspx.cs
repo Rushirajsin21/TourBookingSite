@@ -151,7 +151,7 @@ namespace Site
                 fileupload.SaveAs(path + fileupload.FileName);
                 string st = "~/images/";
                 string img = st + fileupload.FileName;
-                string sql2 = "insert into category values('" + cat_name.Text + "' , '" + img + "' , '" + loc_1.Text + "' , '" + loc_2.Text + "' , 1)";
+                string sql2 = "insert into category values('" + cat_name.Text + "' , '" + img + "' , '" + loc_1.Text + "' , '" + loc_2.Text + "' , '"+loc1_price.Text+"' , '"+loc2_price.Text+"' ,  1)";
                 SqlDataAdapter da2 = new SqlDataAdapter(sql2, DBclass.cn);
                 DataTable dt2 = new DataTable();
                 da2.Fill(dt2);
@@ -173,11 +173,11 @@ namespace Site
             fileupload2.SaveAs(path + fileupload2.FileName);
             string st = "~/images/";
             string img = st + fileupload2.FileName;
-            string sql = "insert into gallery values('"+place_name.Text+"','"+img+"',1)";
-            SqlDataAdapter da2 = new SqlDataAdapter(sql,DBclass.cn);
+            string sql = "insert into gallery values('" + place_name.Text + "','" + img + "',1)";
+            SqlDataAdapter da2 = new SqlDataAdapter(sql, DBclass.cn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
-            if(!da2.Equals(null))
+            if (!da2.Equals(null))
             {
                 galmsg.Text = "Place Added";
                 galmsg.Visible = true;
@@ -187,7 +187,7 @@ namespace Site
                 galmsg.Text = "Place Not added";
                 galmsg.Visible = true;
             }
-
+            
         }
 
         protected void gallery_clear_Click(object sender, EventArgs e)

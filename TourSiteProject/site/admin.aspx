@@ -207,6 +207,16 @@
                    </label>
     &nbsp;<asp:TextBox ID="loc_2" runat="server"  class="form-control" ></asp:TextBox>
   </div>
+           <div class="mb-3 col-12">
+    <label for="exampleInputPassword1" class="form-label">location1 Price:<asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="loc1_price" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                   </label>
+    &nbsp;<asp:TextBox ID="loc1_price" runat="server"  class="form-control" ></asp:TextBox>
+  </div>
+           <div class="mb-3 col-12">
+    <label for="exampleInputPassword1" class="form-label">location2 Price:<asp:RequiredFieldValidator ID="RequiredFieldValidator12" runat="server" ControlToValidate="loc2_price" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                   </label>
+    &nbsp;<asp:TextBox ID="loc2_price" runat="server"  class="form-control" ></asp:TextBox>
+  </div>
                 &nbsp;&nbsp;&nbsp;&nbsp
 
   <asp:Button ID="cat_add" runat="server" Text="Add" type="submit" class="btn btn-primary" Width="96px" OnClick="cat_add_Click" ></asp:Button>
@@ -226,6 +236,9 @@
                            <th>Category Image</th>
                            <th>Location 1</th>
                            <th>Location 2</th>
+                           <th>Price of Location1</th>
+                           <th>Price of Location2</th>
+                            
                        </tr>
                </HeaderTemplate>
                <ItemTemplate>
@@ -235,6 +248,8 @@
                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("cat_img") %>' Height="50px" Width="50px"/></td>
                            <td><%#Eval("location_1") %></td>
                            <td><%#Eval("location_2") %></td>
+                           <td><%#Eval("location1_price") %></td>
+                           <td><%#Eval("location2_price") %></td>
                            <td><a   href="editcategory.aspx?id=<%#Eval("cat_name")%>"  CausesValidation="False">Edit
 </a></td>
                            <td><a href="deletecategory.aspx?name=<%#Eval("cat_name") %>"  >Deactive</a></td>
@@ -259,13 +274,17 @@
                        <label for="exampleInputPa`ssword1" class="form-label">Place Image:<asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="fileupload2" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
 </label>
                    <asp:FileUpload ID="fileupload2" runat="server" class="form-control" type="file"  />
+                    <div class="mb-3 col-12">
+    <label for="exampleInputEmail1" class="form-label">Price :</label><asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+&nbsp;<asp:TextBox ID="price" runat="server"  class="form-control"  aria-describedby="emailHelp"></asp:TextBox>
+  </div>
                    <br /><br />
                    &nbsp;
                    <asp:Button ID="gallery_add" runat="server" Text="Add" type="submit" class="btn btn-primary" Width="96px" OnClick="gallery_add_Click"  ></asp:Button>
                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                <asp:Button ID="gallery_clear" runat="server" Text="Clear" class="btn btn-danger" Width="95px" CausesValidation="False" OnClick="gallery_clear_Click"  />
 
-                   <h3 align="center"><asp:Label ID="galmsg" runat="server" Visible="false"></asp:Label></h3>
+                   <h3 align="center"><asp:Label ID="galmsg" runat="server" Visible="false"></asp:Label><asp:Label ID="imgmsg1" runat="server" Visible="False" ForeColor="Red"></asp:Label></h3>
 
                </div>
             <asp:Repeater ID="Repeater3" runat="server" OnItemCommand="Repeater1_ItemCommand">
@@ -274,6 +293,7 @@
                        <tr>
                            <th>Places Name</th>
                            <th>Places Image</th>
+                           <th>Price </th>
                           
                        </tr>
                </HeaderTemplate>
@@ -282,6 +302,7 @@
                            <td  ><%#Eval("gallery_image_name") %> </td>
                            <td >
                                <asp:Image ID="Image1" runat="server" ImageUrl='<%#Eval("gallery_imgpath") %>' Height="50px" Width="50px"/></td>
+                           <td><%#Eval("price") %></td>
                           
                            <td><a   href="editgallery.aspx?id=<%#Eval("gallery_image_name")%>"  CausesValidation="False">Edit
 </a></td>

@@ -18,6 +18,9 @@
                <div class="mb-3 col-12">
                        
                    <asp:Image ID="Image1" runat="server" height="100px" Width="100px" />
+                    <div class="mb-3 col-12">
+    <label for="exampleInputEmail1" class="form-label">Place Name:</label><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="price" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+&nbsp;<asp:TextBox ID="price" runat="server"  class="form-control"  aria-describedby="emailHelp" ReadOnly="true"></asp:TextBox>
                    <br /><br />
                    &nbsp;
                  
@@ -27,6 +30,7 @@
                    <h3 align="center"><asp:Label ID="galmsg" runat="server" Visible="false"></asp:Label></h3>
 
                </div>
+                   </div>
         </div>
     </form>
 </body>
