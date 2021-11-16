@@ -73,6 +73,20 @@ body {
     margin-bottom: 100px;
 }
 
+.cont {
+    height: 500px;
+    border: 1px solid;
+    border-width: 2px;
+    border-radius: 100px;
+    width: 600px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.smal {
+    width: 200px;
+}
+
 #lbgallery {
     margin-top: 1300px;
 }
@@ -80,4 +94,8 @@ body {
 .gallery1 {
     height: auto;
     width: 100%;
+}
+.abc{
+    width:300px
+
 }

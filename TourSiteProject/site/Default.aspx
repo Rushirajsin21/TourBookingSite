@@ -66,7 +66,7 @@
 
             <ItemTemplate>
                 &nbsp;
-               <a href='<%#Eval("cat_img") %>'>
+               <a href="category.aspx?cat_name=<%#Eval("cat_name") %>">
                    <asp:Image ID="cat1mg" runat="server" Height="200px" Width="230px" ImageUrl='<%#Eval("cat_img") %>' Style="margin-left: 70px; margin-top: 50px; border-radius: 50px; border: 1px solid; border-width: 4px;" AlternateText='<%#Eval("cat_name") %>' />
 
                </a>&nbsp;
@@ -86,12 +86,12 @@
    
         <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
-                <a href="#">
+                <a href="gallery.aspx?galname=<%#Eval("gallery_image_name") %>">
                     <asp:Image ID="Image1" runat="server" Style="margin-left:70px; margin-top:50px; border-radius:50px; border:1px solid; border-width:4px;"
-                        ImageUrl='<%#Eval("gallery_imgpath") %>' Height="400px" Width="430px" />
+                        ImageUrl='<%#Eval("gallery_imgpath") %>' Height="350px" Width="350px" />
                 </a>&nbsp;
                 <asp:Label ID="Label3" runat="server" Text='<%#Eval("gallery_image_name") %>' Font-Bold="True" Font-Italic="True" Font-Size="Medium"></asp:Label>
-                &nbsp;
+                &nbsp;Rs. <%#Eval("price") %>
             </ItemTemplate>
             
         </asp:Repeater>

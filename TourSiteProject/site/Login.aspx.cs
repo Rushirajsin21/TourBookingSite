@@ -50,7 +50,6 @@ namespace Site
             SqlDataAdapter da = new SqlDataAdapter(sql, DBclass.cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            Session["user"] = dt.Rows[0]["rgusername"];
             if(dt.Rows.Count>0)
             {
                 Session["logedin"] = "loged_in";
@@ -61,9 +60,6 @@ namespace Site
                 Button btnlogout = (Button)Master.FindControl("btnlogout");
                 btnlogout.Visible = true;
                 
-
-
-
             }
             else
             {

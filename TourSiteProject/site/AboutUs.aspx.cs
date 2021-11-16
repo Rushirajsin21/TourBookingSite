@@ -11,16 +11,7 @@ namespace Site
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["aboutus_start"] = "aboutus";
-            if (Session["aboutus_start"].ToString() == "aboutus" ) 
-            {
-                LinkButton linkButton = (LinkButton)Master.FindControl("Aboutus");
-                linkButton.Visible = false;
-                
-            }
 
         }
-
-       
     }
 }

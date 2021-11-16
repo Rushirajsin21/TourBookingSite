@@ -17,6 +17,7 @@ namespace Site
             admins1.Visible = false;
             category1.Visible = false;
             gallery1.Visible = false;
+            contactus.Visible = false;
             
             if((string)Session["admin_role"]!="Super Admin")
             {
@@ -40,6 +41,12 @@ namespace Site
             da3.Fill(dt3);
             Repeater3.DataSource = dt3;
             Repeater3.DataBind();
+            string sql4 = "select * from contact";
+            SqlDataAdapter da4 = new SqlDataAdapter(sql4, DBclass.cn);
+            DataTable dt4 = new DataTable();
+            da4.Fill(dt4);
+            Repeater4.DataSource = dt4;
+            Repeater4.DataBind();
 
 
         }
@@ -70,13 +77,19 @@ namespace Site
         protected void add_Click(object sender, EventArgs e)
         {
             admins1.Visible = true;
-            string sql = "insert into admin values('"+admin_name.Text+"','"+admin_role.Text+"','"+password.Text+"' ,1)";
+            string sql = "insert into admin values('"+admin_name.Text+"','"+admin_role.Text+"','"+password.Text+"' , 1)";
             SqlDataAdapter da = new SqlDataAdapter(sql, DBclass.cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             if(!da.Equals(null))
             {
                 Label1.Text = "Admin added";
+                string sql1 = "select * from admin where status=1 ";
+                SqlDataAdapter da1 = new SqlDataAdapter(sql1, DBclass.cn);
+                DataTable dt1 = new DataTable();
+                da1.Fill(dt1);
+                Repeater1.DataSource = dt1;
+                Repeater1.DataBind();
             }
             else
             {
@@ -194,6 +207,11 @@ namespace Site
         {
             place_name.Text = "";
             fileupload2.Dispose();
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            contactus.Visible = true;
         }
     }
 }

@@ -20,9 +20,9 @@ namespace Site
         protected void cat_clear_Click(object sender, EventArgs e)
         {
 			cat_name.Text = loc_1.Text = loc_2.Text = "";
-			fileupload.Dispose();
-
-        }
+            fileupload.Dispose();
+        
+        }       
 
         protected void cat_add_Click(object sender, EventArgs e)
         {

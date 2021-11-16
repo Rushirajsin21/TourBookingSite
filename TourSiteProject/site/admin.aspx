@@ -67,6 +67,16 @@
             border-width:2px;*/
             border-color:black;
         }
+        #contactus{
+                float:right;
+            width:85%;
+            height:90%;
+            background-color:white;
+            border-radius:10px;
+            /*border:1px solid;
+            border-width:2px;*/
+            border-color:black;
+        }
         #gallery1{
               float:right;
             width:85%;
@@ -96,6 +106,11 @@
            <br />
            <div id="admin_gallery_image" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-picture-o fa-lg" aria-hidden="true">
                <asp:LinkButton ID="gallerylink" runat="server" ForeColor="White" OnClick="gallerylink_Click" CausesValidation="False">Gallery</asp:LinkButton></i>
+               </div>
+           <br />
+             <div id="contact" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-address-book fa-lg" aria-hidden="true">
+
+               <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="White" CausesValidation="False" OnClick="LinkButton1_Click">Contact detail</asp:LinkButton></i>
                </div>
                 <br />
            <div id="logout" runat="server" class="border">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-out fa-lg">
@@ -275,7 +290,7 @@
 </label>
                    <asp:FileUpload ID="fileupload2" runat="server" class="form-control" type="file"  />
                     <div class="mb-3 col-12">
-    <label for="exampleInputEmail1" class="form-label">Price :</label><asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+    <label for="exampleInputEmail1" class="form-label">Price :</label><asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ControlToValidate="price" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
 &nbsp;<asp:TextBox ID="price" runat="server"  class="form-control"  aria-describedby="emailHelp"></asp:TextBox>
   </div>
                    <br /><br />
@@ -315,6 +330,38 @@
                    </table>
                </FooterTemplate>
            </asp:Repeater>
+       </div>
+       <div id="contactus" runat="server">
+                      <h2 align="center">Contact Form Detail </h2>
+                      <br /><br />
+
+           <asp:Repeater ID="Repeater4" runat="server">
+               <HeaderTemplate>
+                   <table align="center" border="1" cellpadding="20px" >
+                    <tr>
+                        <th>Username</th>
+                        <th>User's Email</th>
+                        <th>User's Contact Number</th>
+                        <th>User's Message</th>
+                    </tr>
+
+               </HeaderTemplate>
+               <ItemTemplate>
+                   <tr>
+                       <td><%#Eval("username") %></td>
+                       <td><%#Eval("email") %></td>
+                       <td><%#Eval("contact_number") %></td>
+                       <td><%#Eval("message") %></td>
+                   </tr>
+
+               </ItemTemplate>
+               <FooterTemplate>
+                   </table>
+               </FooterTemplate>
+
+           </asp:Repeater>
+           
+
        </div>
    </form>
 </body>
