@@ -131,7 +131,6 @@
     <Content Include="purchase.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="StyleSheet1.css" />
-    <Content Include="Web.config" />
     <Content Include="Default.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="cart.aspx" />
@@ -285,12 +284,6 @@
     <Content Include="fonts\Helvetica\HelveticaLt.ttf" />
     <None Include="packages.config" />
     <Content Include="Tour.Master" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

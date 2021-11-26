@@ -71,6 +71,7 @@
 
                </a>&nbsp;
                 <asp:Label ID="Label1" runat="server" Text='<%#Eval("cat_name") %>' Font-Bold="True" Font-Italic="True" Font-Overline="False" Font-Size="Medium"></asp:Label>
+    <asp:GridView runat="server"></asp:GridView>
             </ItemTemplate>
 
 
